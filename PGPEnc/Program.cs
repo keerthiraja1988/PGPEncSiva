@@ -14,10 +14,10 @@
     {
         private static async Task Main(string[] args)
         {
-            var keyfilePath = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-
             //https://pgpkeygen.com/
+            // <package id="ChoPGP" version="1.0.1.3" targetFramework="net472" />
 
+            var keyfilePath = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             string publicKey = File.ReadAllText(keyfilePath + @"\" + "publickey.asc");
             string privateKey = File.ReadAllText(keyfilePath + @"\" + "privatekey.asc");
 
